@@ -1,0 +1,7 @@
+interface:
+  display_name: "动效大师"
+  short_description: "以审美命题统筹节奏、物理感、品牌人格、交互动效与动态叙事"
+  brand_color: "#7B3FF2"
+  default_prompt: "Use $motion-grandmaster to define an aesthetically coherent, accessible, and production-ready motion direction for this experience."
+policy:
+  allow_implicit_invocation: true

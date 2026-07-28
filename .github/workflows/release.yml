@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+      - run: python scripts/build_compat.py --platform all
+      - name: Publish packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp dist/portable/motion-grandmaster.zip dist/motion-grandmaster-portable.zip
+          gh release create "$GITHUB_REF_NAME" \
+            dist/trae/motion-grandmaster.zip \
+            dist/openai/motion-grandmaster-plugin.zip \
+            dist/coze/motion-grandmaster-coze.zip \
+            dist/motion-grandmaster-portable.zip \
+            --verify-tag --generate-notes --title "$GITHUB_REF_NAME"

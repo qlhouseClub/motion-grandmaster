@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-07-28",
+  "skill": {
+    "name": "motion-grandmaster",
+    "display_name": "动效大师",
+    "version": "0.1.0",
+    "repository": "https://github.com/qlhouseClub/motion-grandmaster",
+    "publisher": {
+      "name": "qlhouseClub",
+      "url": "https://github.com/qlhouseClub"
+    },
+    "short_description": "以审美命题统筹节奏、物理感、品牌人格、交互动效与动态叙事",
+    "long_description": "从客户审美和动态研究出发，建立 Motion Thesis、时间构图、物理材质、交互动效、品牌签名、Motion Token 与生产验证。",
+    "category": "Creativity",
+    "capabilities": ["Interactive", "Write"],
+    "keywords": [
+      "motion-design",
+      "animation",
+      "interaction-motion",
+      "kinetic-typography",
+      "brand-motion",
+      "motion-tokens",
+      "storyboard",
+      "signature-moment",
+      "accessibility",
+      "performance"
+    ],
+    "default_prompts": [
+      "用动效大师为这个项目建立具有审美特异性和生产可行性的 Motion Thesis。",
+      "用动效大师审查这套动效的节奏、物理一致性、品牌人格、无障碍和性能。"
+    ]
+  }
+}

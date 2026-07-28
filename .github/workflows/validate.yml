@@ -1,0 +1,35 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check pyyaml==6.0.2
+      - name: Validate metadata
+        run: |
+          python - <<'PY'
+          import json, yaml
+          from pathlib import Path
+          root = Path(".")
+          for name in ("README.md", "LICENSE", "SECURITY.md", "CONTRIBUTING.md", "THIRD_PARTY_NOTICES.md", "COMPATIBILITY.md"):
+              assert (root / name).is_file(), f"missing {name}"
+          text = (root / "SKILL.md").read_text(encoding="utf-8")
+          fm = yaml.safe_load(text.split("---", 2)[1])
+          manifest = json.loads((root / "platforms/manifest.json").read_text(encoding="utf-8"))
+          assert fm["name"] == manifest["skill"]["name"]
+          yaml.safe_load((root / "agents/openai.yaml").read_text(encoding="utf-8"))
+          PY
+      - run: python scripts/build_compat.py --platform all
+      - run: git diff --check
