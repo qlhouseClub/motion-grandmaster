@@ -8,4 +8,4 @@ No third-party code, prose, clips, audio, fonts, images, logos, model files, or 
 
 Verify upstream version, license, model/output terms, asset rights, and platform guidance before reuse. External names and links do not imply endorsement or affiliation.
 
-Last reviewed: 2026-07-28.
+Last reviewed: 2026-07-30.

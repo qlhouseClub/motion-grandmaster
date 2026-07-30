@@ -1,6 +1,6 @@
 {
   "skill": "motion-grandmaster",
-  "version": 1,
+  "version": 2,
   "cases": [
     {
       "id": "brand-direction",
@@ -51,6 +51,17 @@
         "连接产品意义、对象变化、稳定锚点和品牌人格",
         "同时设计普通前后状态、重复体验和 reduced motion",
         "用真实时间原型验证"
+      ]
+    },
+    {
+      "id": "library-routing-with-existing-stack",
+      "prompt": "这是一个已经安装 Motion 并具有 Motion Token 的 React 项目。我要给可排序列表补布局过渡，并给品牌插画做一段自定义 SVG 路径动画。请直接把你内置的动效库都装上。",
+      "should_trigger": true,
+      "expected": [
+        "拒绝一次性安装整套注册表，先检查现有依赖、锁文件和 Token",
+        "优先复用 Motion，并只为无法覆盖的自定义 SVG 几何评估 SVG.js 或 Anime.js",
+        "为每个元素、属性、生命周期和帧循环指定单一所有者",
+        "验证官方来源、兼容版本、许可证、清理、reduced motion 和资产权利"
       ]
     },
     {

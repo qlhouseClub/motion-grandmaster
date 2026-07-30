@@ -1,6 +1,6 @@
 ---
 name: motion-grandmaster
-description: "Aesthetic direction and production design for motion across product interaction, brand systems, websites, launch moments, kinetic typography, spatial transitions, animation, and video. Use for 动效设计、交互动效、微动效、页面转场、品牌动效、动态视觉、动态排版、标题序列、镜头、节奏、缓动、弹簧、物理感、材质运动、滚动叙事、手势、加载、反馈、签名时刻、Motion Token、动效规范、故事板、动画原型、动效审美评审、Lottie、Rive、GSAP、Motion、CSS、Three.js、WebGL、Remotion、p5.js，or when motion must feel intentional, distinctive, accessible, performant, system-compliant, and production-ready rather than merely animated."
+description: "Aesthetic direction and production design for motion across product interaction, brand systems, websites, launch moments, kinetic typography, spatial transitions, animation, and video. Use for 动效设计、交互动效、微动效、页面转场、品牌动效、动态视觉、动态排版、标题序列、镜头、节奏、缓动、弹簧、物理感、材质运动、滚动叙事、手势、加载、反馈、签名时刻、Motion Token、动效规范、故事板、动画原型、动效审美评审、Motion、Anime.js、React Spring、AutoAnimate、SVG.js、ManimGL、Lottie、Rive、Lenis、Three.js、React Three Fiber、Motion Canvas、React Native Reanimated、CSS、WebGL，or when motion must feel intentional, distinctive, accessible, performant, system-compliant, and production-ready rather than merely animated."
 ---
 
 # Motion Grandmaster
@@ -24,6 +24,7 @@ Direct time, attention, energy, and change as one coherent visual language. Use 
 13. **Sound and haptics are not decoration.** Use them only when context, permission, repetition, latency, and accessibility support them.
 14. **A memorable moment needs contrast.** If everything performs, nothing feels authored.
 15. **Production truth matters.** A beautiful reference is not a solution until it survives target content, device, input, performance, and implementation constraints.
+16. **Libraries implement; they do not art-direct.** Reuse the existing stack first, select one primary owner for each behavior, and never let a demo or preset define the project’s motion language.
 
 ## Emoji and icon policy
 
@@ -152,10 +153,14 @@ Write a motion intent:
 
 ### 8. Select the production route and prototype
 
-- Choose technique after deciding visual needs: CSS/Web Animations, Motion, GSAP, Lottie, Rive, SVG, Canvas/p5.js, Three.js/WebGL, Remotion/video, or another target-native system.
+- Inspect the existing framework, package manager, lockfile, motion dependencies, and runtime constraints before introducing a tool.
+- Prefer static behavior, CSS, or Web Animations when they truthfully solve the need. Otherwise route by behavior: Motion for general component/layout motion; Anime.js for framework-independent timelines and DOM/SVG choreography; React Spring for continuous React physics; AutoAnimate for simple structural layout changes; SVG.js for custom vector geometry.
+- Treat ManimGL as an auxiliary rendered-explanation route. Use Motion Primitives, Lucide Animated, dotLottie, Rive, Lenis, Three.js/React Three Fiber, Motion Canvas, or React Native Reanimated only when their conditional trigger and safeguards are satisfied.
+- Select one primary engine for each behavior. Add only non-overlapping auxiliaries, and do not install the registry as a stack.
 - Prototype timing, continuity, interruption, compositing, text, real assets, and representative devices.
 - Use keyframes/storyboards to approve composition; use animatics to approve sequence; use interactive prototypes to approve real-time behavior; use runtime profiling to approve production.
 - Define asset ownership, export settings, responsive/crop rules, fallback, and versioning.
+- Read [open-source-motion-library-registry.md](references/open-source-motion-library-registry.md) before retrieving, installing, copying, or combining a motion library.
 - Read [tools-production-and-handoff.md](references/tools-production-and-handoff.md) for engine routing and implementation contracts.
 
 ### 9. Critique, adapt, and verify
@@ -210,6 +215,7 @@ Use [artifact-templates.md](references/artifact-templates.md) for motion briefs,
 - **Physical gate:** acceleration, material, depth, deformation, light, and sound do not contradict each other.
 - **Interaction gate:** real-time motion is responsive, interruptible, reversible, and state-correct.
 - **System gate:** approved tokens and patterns are used without unauthorized drift.
+- **Tooling gate:** the existing stack was inspected; each dependency has a necessary, non-overlapping role; source, package, compatibility, version, license, lifecycle ownership, and fallback are recorded.
 - **Symbol gate:** every deliverable is free of emoji decoration unless explicitly requested; any icons reuse the approved set or a project-consistent SVG grammar.
 - **Accessibility gate:** meaning survives reduced motion, absent sound/haptic, and assistive use.
 - **Performance gate:** target devices and runtime meet the agreed budget without masking latency.
@@ -218,6 +224,8 @@ Use [artifact-templates.md](references/artifact-templates.md) for motion briefs,
 ## Anti-patterns
 
 - Do not begin with an animation library, preset, or trend name.
+- Do not install a collection of motion libraries speculatively, or give two engines ownership of the same element, property, state lifecycle, or frame loop.
+- Do not import a library demo’s timing, physics, spacing, color, typography, iconography, or visual treatment as the project’s aesthetic system.
 - Do not animate every visible object or stagger every list.
 - Do not use bounce as a synonym for personality.
 - Do not mix elastic, inertial, liquid, and rigid behavior without an intentional material system.

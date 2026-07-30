@@ -4,7 +4,7 @@
   "skill": {
     "name": "motion-grandmaster",
     "display_name": "动效大师",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "repository": "https://github.com/qlhouseClub/motion-grandmaster",
     "publisher": {
       "name": "qlhouseClub",
@@ -21,6 +21,12 @@
       "kinetic-typography",
       "brand-motion",
       "motion-tokens",
+      "motion-library-registry",
+      "animejs",
+      "react-spring",
+      "auto-animate",
+      "svg",
+      "manimgl",
       "storyboard",
       "signature-moment",
       "accessibility",
@@ -28,7 +34,8 @@
     ],
     "default_prompts": [
       "用动效大师为这个项目建立具有审美特异性和生产可行性的 Motion Thesis。",
-      "用动效大师审查这套动效的节奏、物理一致性、品牌人格、无障碍和性能。"
+      "用动效大师审查这套动效的节奏、物理一致性、品牌人格、无障碍和性能。",
+      "用动效大师检查现有技术栈，并从开源动效库注册表中选择最小且职责清晰的实现路线。"
     ]
   }
 }

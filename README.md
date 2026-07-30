@@ -12,7 +12,9 @@
 - 产品 Signature Moment 与品牌动态识别
 - 动态排版、镜头、剪辑、声音和触觉
 - Motion Token、组件动效模式和治理
-- CSS、Motion、GSAP、Lottie、Rive、Canvas、Three.js、Remotion 等生产路由
+- CSS / Web Animations、Motion、Anime.js、React Spring、AutoAnimate、SVG.js 等默认生产路由
+- ManimGL 辅助路线，以及 dotLottie、Rive、Lenis、Three.js / React Three Fiber、Motion Canvas、React Native Reanimated 等条件路线
+- 开源动效库选型、组合所有权、依赖获取、版本许可与资产权利治理
 - reduced motion、前庭安全、性能预算和运行验证
 
 ## 审美决策不是附录
@@ -32,6 +34,24 @@
 - 趋势必须研究其谱系、机制、饱和度和过期风险
 - reduced motion 不是简单删除一切，而是保留状态、因果与层级
 - 故事板证明构图，Animatic 证明节奏，交互原型证明实时行为，运行分析证明生产可行
+- 动效库只负责实现，不负责决定审美；先复用现有技术栈，再为每个行为选择一个主要所有者
+- 默认核心库是 Motion、Anime.js、React Spring、AutoAnimate 和 SVG.js，但“默认核心”不等于默认安装
+
+## 内置开源动效库注册表
+
+| 分层 | 选型 | 用途 |
+|---|---|---|
+| 默认核心 | M1 Motion | 通用组件、布局、手势与滚动关联动效 |
+| 默认核心 | M2 Anime.js | 框架无关的 DOM、SVG、对象和时间线编排 |
+| 默认核心 | M3 React Spring | React 中连续、可中断、状态趋向型的物理运动 |
+| 默认核心 | M4 AutoAnimate | 简单的增删、排序与布局变化 |
+| 默认核心 | M11 SVG.js | 自定义 SVG 构造、几何与矢量动效 |
+| 辅助 | M16 ManimGL | 数学、数据、系统与算法解释视频 |
+| 条件触发 | Motion Primitives、Lucide Animated、dotLottie、Rive、Lenis、Three.js / React Three Fiber、Motion Canvas、React Native Reanimated | 仅在项目技术栈、行为目标和运行约束明确匹配时引入 |
+
+技能不会一次性安装这些库。Agent 必须先检查项目框架、包管理器、锁文件、已有依赖、设计规范和 Motion Token，再验证官方仓库、当前包名、版本兼容性与许可证；每个元素、属性、状态周期和动画帧循环只允许一个主要实现所有者。
+
+完整的选型边界、组合规则与依赖获取协议见 [开源动效库注册表](references/open-source-motion-library-registry.md)。
 
 ## 跨平台安装
 
