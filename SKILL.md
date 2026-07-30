@@ -25,6 +25,16 @@ Direct time, attention, energy, and change as one coherent visual language. Use 
 14. **A memorable moment needs contrast.** If everything performs, nothing feels authored.
 15. **Production truth matters.** A beautiful reference is not a solution until it survives target content, device, input, performance, and implementation constraints.
 
+## Emoji and icon policy
+
+Apply this policy to prose, specifications, prototypes, interfaces, decks, diagrams, and generated assets.
+
+- Do not use emoji as decoration, bullets, icons, status markers, badges, labels, empty-state art, or substitutes for interface symbols.
+- Permit emoji only when the user explicitly requests emoji for the current project or output. Casual emoji use, an informal tone, or a reference containing emoji is not authorization. Keep the exception limited to the requested placements.
+- Reuse the approved design-system or brand icon set when one exists. When format choice is under project control, use SVG as the primary icon format; do not substitute Unicode pictographs, emoji, raster icons, or icon fonts for convenience.
+- Lock one icon grammar per project: source family, grid and viewBox, outline or fill mode, stroke weight, caps and joins, corner language, optical size, color behavior, and motion behavior. Do not mix icon families or styles unless the user approves a documented exception.
+- Make functional SVG icons accessible: provide an accessible name when the icon carries meaning, hide decorative icons from assistive technology, and never rely on an icon alone when its meaning is ambiguous.
+
 ## Select the engagement mode
 
 | User need | Mode | Minimum deliverable |
@@ -200,6 +210,7 @@ Use [artifact-templates.md](references/artifact-templates.md) for motion briefs,
 - **Physical gate:** acceleration, material, depth, deformation, light, and sound do not contradict each other.
 - **Interaction gate:** real-time motion is responsive, interruptible, reversible, and state-correct.
 - **System gate:** approved tokens and patterns are used without unauthorized drift.
+- **Symbol gate:** every deliverable is free of emoji decoration unless explicitly requested; any icons reuse the approved set or a project-consistent SVG grammar.
 - **Accessibility gate:** meaning survives reduced motion, absent sound/haptic, and assistive use.
 - **Performance gate:** target devices and runtime meet the agreed budget without masking latency.
 - **Production gate:** the actual temporal behavior—not only static frames—has been reviewed.
@@ -218,3 +229,4 @@ Use [artifact-templates.md](references/artifact-templates.md) for motion briefs,
 - Do not copy a reference shot, living creator’s signature, brand ident, or title sequence.
 - Do not confuse technical complexity with aesthetic quality.
 - Do not claim production readiness from a storyboard, mockup, or smooth recording alone.
+- Do not use emoji as decorative shorthand or interface iconography without an explicit user request, and do not mix icon families or visual grammars within one project.

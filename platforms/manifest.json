@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "verified_on": "2026-07-28",
+  "verified_on": "2026-07-30",
   "skill": {
     "name": "motion-grandmaster",
     "display_name": "动效大师",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repository": "https://github.com/qlhouseClub/motion-grandmaster",
     "publisher": {
       "name": "qlhouseClub",
