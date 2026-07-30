@@ -1,6 +1,23 @@
 # Motion Grandmaster / 动效大师
 
+[![Validate](https://github.com/qlhouseClub/motion-grandmaster/actions/workflows/validate.yml/badge.svg)](https://github.com/qlhouseClub/motion-grandmaster/actions/workflows/validate.yml)
+[![Release](https://img.shields.io/github/v/release/qlhouseClub/motion-grandmaster?display_name=tag)](https://github.com/qlhouseClub/motion-grandmaster/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 一个把审美判断、时间构图、物理感、品牌人格、交互动效、动态叙事和生产实现连接起来的动效技能包。它不从动画库或潮流名称出发，而先判断为什么动、如何动、什么必须保持静止，以及这种运动为什么只属于当前项目。
+
+## 最近更新
+
+### [v0.2.0](https://github.com/qlhouseClub/motion-grandmaster/releases/tag/v0.2.0) — 2026-07-30
+
+- 建立开源动效库注册表：Motion、Anime.js、React Spring、AutoAnimate 和 SVG.js 为默认候选，ManimGL 为辅助路线。
+- 为 Motion Primitives、Lucide Animated、dotLottie、Rive、Lenis、Three.js / React Three Fiber、Motion Canvas 和 React Native Reanimated 定义条件触发边界。
+- 加入最小依赖、单一实现所有者、帧循环协调、版本与许可证核验、资产权利、降级和性能验收规则。
+- 默认禁止 Emoji 修饰；图标优先复用批准图标集，新增图标以项目一致的 SVG 语法为主。
+
+### v0.1.0 — 2026-07-28
+
+- 初始版本，建立 Motion Thesis、时间构图、物理材质、交互动效、品牌签名、Motion Token 和生产验证主链路。
 
 ## 核心能力
 
